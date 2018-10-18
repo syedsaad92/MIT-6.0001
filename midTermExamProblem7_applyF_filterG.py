@@ -1,7 +1,3 @@
-Problem 7
-20.0/20.0 points (graded)
-Implement a function that meets the specifications below.
-
 def applyF_filterG(L, f, g):
     """
     Assumes L is a list of integers
@@ -14,25 +10,30 @@ def applyF_filterG(L, f, g):
     Returns the largest element in the mutated L or -1 if the list is empty
     """
     # Your code here
-For example, the following functions, f, g, and test code:
+#For example, the following functions, f, g, and test code:
 
+#def f(i):
+#    return i + 2
+#def g(i):
+#    return i > 5
+#
+#L = [0, -10, 5, 6, -4]
+#print(applyF_filterG(L, f, g))
+#print(L)
+#Should print:
+#
+#6
+#[5, 6]
+#For this question, you will not be able to see the test cases we run. This problem will test your ability to come up with your own test cases.
+
+# Paste your function here
+ 
 def f(i):
     return i + 2
 def g(i):
-    return i > 5
-
-L = [0, -10, 5, 6, -4]
-print(applyF_filterG(L, f, g))
-print(L)
-Should print:
-
-6
-[5, 6]
-For this question, you will not be able to see the test cases we run. This problem will test your ability to come up with your own test cases.
-
-# Paste your function here
-def applyF_filterG(L, f, g):
-    temp = []
+    return i > 5    
+def applyF_filterG(L, f, g):        
+    temp = []    
     for i in L:
         if g(f(i)) == True:
             temp.append(i)
@@ -42,6 +43,5 @@ def applyF_filterG(L, f, g):
     else:
         return max(L)
 
-Correct
-Test results
-CORRECT
+L = [0, -10, 5, 6, -4]
+print(applyF_filterG(L, f, g))
